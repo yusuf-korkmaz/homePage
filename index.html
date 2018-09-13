@@ -1,0 +1,220 @@
+<html>
+<header>
+<title>Webapp</title>
+
+
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</header>
+
+<body onload='initialize()'>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Resume')" id="defaultOpen">Resume</button>
+  <button class="tablinks" onclick="openCity(event, 'Currency')">Currency</button>
+</div>
+
+<!-- Tab content -->
+<div id="Resume" class="tabcontent">
+ 	<div id=frame>
+		<div id=left>
+				<img width=250 align=right src="yusuf.jpg">
+				
+			  	<h2><center>Yusuf KORKMAZ</center></h2> 
+
+                <p><h1>
+                Computer Science<br>
+                University of Michigan-Flint<br>
+				Suclat@gmail.com<br>
+				</p>
+                
+				<hr>
+                <p>The University of Michigan-Flint<br>
+                303 E. Kearsley Street<br>
+				Flint MI 48502<br>
+                (810) 762-3300</p>
+				</h1>
+				
+				<hr color="#2B5381">
+				<h4><center>COMPUTER SKILLS</center></h4>
+				<h1>Java SE, Python, C++, SQL<br>
+				Algorithm Design, Matlab,
+				Android, Spring<br>
+				Artificial Intelligence</h1>
+				<br>
+				
+				<hr color="#2B5381">
+				<h4><center>AWARDS AND CERTIFICATIONS</center></h4>
+				<h1>- Java SE 7 Developer Certification <br>
+					- E-Devlet Competition (Second Place) <br>
+					- 2013 - 2014 Year Best Student Award <br>
+					- ICSG The Best Paper Award <br>
+					- First Student of Computer Engineering Department Certification<br>
+				</h1>
+				<br>
+				
+				<hr color="#2B5381">
+				<h4><center> FAVOURITE QUOTE </center></h4>
+				<h1>If you want to build a ship, dont drum up people together to collect wood and dont assign them tasks and work, but rather teach them to long for the endless immensity of the sea.<br>
+				<b>Antoine de Saint-Exupery</b><br>
+				</h1>
+				
+		</div> <!--left-->
+	
+		<div id=right>
+			
+				<h3><hr color="#2B5381"><center>EDUCATION</center><hr color="#2B5381"></h3> 
+
+                <p><h1>
+                <b>BACHELORS DEGREE / 2011 - 2016</b><br>
+				Fatih Sultan Mehmet University Istanbul, Turkey<br>
+				Computer Engineering - GPA: 3.14/4.00 (Ranked 1st)<br>
+				<b>MASTERS DEGREE / 2017 - PRESENT</b><br>
+				University of Michigan Flint Michigan, United States<br>
+				Computer Science<br>
+				</p>
+				
+				<h3><hr color="#2B5381"><center>EXPERIENCE</center><hr color="#2B5381"></h3> 
+
+                <p><h1>
+                <b>GRADUATE STUDENT RESEARCH ASSISTANTSHIP <br>
+                UNIVERSITY OF MICHIGAN FLINT MICHIGAN, UNITED STATES</b><br>
+                <i>September 2017 / present<br></i>
+                GSRA at Department of Computer Science. working on Machine Learning, using
+                Python with open source ML libraries.<br>
+                <b>PROJECT ASSITANT STUDENT <br>
+                ALUTEAM ISTANBUL, TURKEY</b><br>
+                <i>January / April 2016<br></i>
+                A team leader of 3D Printer Developing Projects Engineer Team. Worked as a
+                Software Engineer.<br>
+                <b>ASSITANT STUDENT <br>
+                FATIH SULTAN MEHMET UNIVERSITY ISTANBUL, TURKEY</b><br>
+                <i>October 2013 / June 2014<br></i>
+                Taught freshman students Java and help them on their projects. <br>
+				</p></h1>
+				
+
+				
+				<h3><hr color="#2B5381"><center>PUBLICATIONS</center><hr color="#2B5381"></h3> 
+
+                <p><h1>
+                <b>A Mobile Application System to Manage Electricity Consumption</b><br>
+				Oguzhan Oktay Buyuk, <b>Yusuf Korkmaz<br></b>
+				In 3rd International Istanbul Smart Grid Congress (ICSG), 2015.<br>
+				<b>Developing Password Security System by Using Artificial Neural
+				Network by User Log in System<br>
+				Yusuf Korkmaz<br></b>
+				In 2nd Electric Electronics, Computer Science, Biomedical Engineerings Meeting<br>
+				(EBBT), 2016.<br>
+				</p></h1>
+				
+				<h3><hr color="#2B5381"><center>PROJECTS</center><hr color="#2B5381"></h3> 
+
+                <p><h1>
+                <b>Bridge Project and System Software</b> <i>(Software Developer, 2013/Turkey)</i><br>
+                <b>E-Problem Notification</b> <i>(Software Developer, 2014/Turkey)</i><br>
+                <b>Information Systems Integration Test</b> <i>(Software Developer, 2015/Turkey)</i><br>
+                <b>3D Printer</b> <i>(Software Developer Team Leader, 2016/Turkey)</i><br>
+                <b>Developing Password Security System by Using Artificial Neural Networks
+                in User Log in Systems</b> <i>(Machine Learning Researcher, 2016/Turkey)</i><br>
+                <b>Discover Hidden Motifs in Texts by Using Text Mining</b> <i>(Machine Learning
+                Researcher, 2018/USA)</i><br>
+				</p></h1>
+				
+				
+                <hr color="#2B5381">
+				
+				
+		</div> <!--right-->
+	
+	
+	</div>
+	
+	
+
+</div>
+
+<div id="Currency" class="tabcontent">
+
+	<h3>Currency</h3>
+	<Label> Amount Of Money:</Label>
+	<input type ='input' id='amountOfMoney' placeholder='Amount of money'>
+	<label id='labelCurrency' >$</label><br>
+	<hr>
+
+	
+	<fieldset data-role="controlgroup">
+	<legend>Currency:</legend>
+	<input type="radio" name="units" id="dollarRadio" value="Dollar" checked="checked">
+	<label for="dollarRadio">Dollar</label>
+	<input type="radio" name="units" id="tlRadio" value="TL">
+	<label for="tlRadio">TL</label>
+	</fieldset>
+	
+	
+	<button type="button" id="convertButton" onclick="convertClick()">Convert</button><br>
+	<br>
+	<label id='anotherCurrency' >Dollar to TL / TL to Dollar</label>
+
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+function convertClick(){
+	var labelCurrency = document.getElementById("labelCurrency");
+	var amountOfMoney = document.getElementById("amountOfMoney");
+	if(labelCurrency.innerHTML =="TL"){
+		document.getElementById("anotherCurrency").innerHTML = amountOfMoney.value + " TL converted to " + amountOfMoney.value/5.1 +" $";
+	}
+	else{
+		document.getElementById("anotherCurrency").innerHTML = amountOfMoney.value + " $ converted to " + amountOfMoney.value*5.1 +" TL";
+	}
+	
+}
+
+function initialize(){
+	var amountOfMoney = document.getElementById("amountOfMoney");
+	amountOfMoney.addEventListener("blur",validateMoney);
+	
+	document.getElementById("dollarRadio").onclick= 
+	function(){setUnits("$")}; 
+	
+	document.getElementById("tlRadio").onclick= 
+	function(){setUnits("TL")};
+
+}
+
+function validateMoney(){
+	var amountOfMoney = document.getElementById("amountOfMoney");
+	if(amountOfMoney.value ==""){
+		alert('Amount of money value must be a number');
+		amountOfMoney.value="";
+	}
+	if(amountOfMoney.value < 0){
+		alert('Amount of money value must be greater than 0');
+		amountOfMoney.value="";
+	}
+	
+}
+
+function setUnits(str){
+	document.getElementById("labelCurrency").innerHTML = str;
+}
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>
